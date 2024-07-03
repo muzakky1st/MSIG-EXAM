@@ -1,0 +1,1775 @@
+{
+	"info": {
+		"_postman_id": "552d87da-2ae5-45ab-a025-127e8b579e5c",
+		"name": "[MSIG] Zikri Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guru",
+			"item": [
+				{
+					"name": "Add Guru",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namaGuru\" : \"Ayu Utami\",\r\n    \"status\": false,\r\n    \"mataPelajaran\": \"Bhs Inggris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-guru-service}}/guru/create",
+							"host": [
+								"{{url-guru-service}}"
+							],
+							"path": [
+								"guru",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Guru",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-guru-service}}/guru/getDetail?id=9",
+							"host": [
+								"{{url-guru-service}}"
+							],
+							"path": [
+								"guru",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-guru-service}}/guru/getDetail?id=5",
+									"host": [
+										"{{url-guru-service}}"
+									],
+									"path": [
+										"guru",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:43:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"namaGuru\": \"Ayu Utami\",\n    \"status\": false,\n    \"mataPelajaran\": \"Bhs Inggris\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-guru-service}}/guru/getDetail?id=9",
+									"host": [
+										"{{url-guru-service}}"
+									],
+									"path": [
+										"guru",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:44:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/guru-service/guru/getDetail\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Guru",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 4,\r\n    \"namaGuru\" : \"Siska\",\r\n    \"status\" : false,\r\n    \"mataPelajaran\" : \"TIK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-guru-service}}/guru/update",
+							"host": [
+								"{{url-guru-service}}"
+							],
+							"path": [
+								"guru",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" :94,\r\n    \"namaGuru\" : \"Siska\",\r\n    \"status\" : false,\r\n    \"mataPelajaran\" : \"TIK\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-guru-service}}/guru/update",
+									"host": [
+										"{{url-guru-service}}"
+									],
+									"path": [
+										"guru",
+										"update"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:45:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/guru-service/guru/update\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Guru",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-guru-service}}/guru/delete?id=2",
+							"host": [
+								"{{url-guru-service}}"
+							],
+							"path": [
+								"guru",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Guru",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-guru-service}}/guru/list",
+							"host": [
+								"{{url-guru-service}}"
+							],
+							"path": [
+								"guru",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-guru-service}}/guru/list",
+									"host": [
+										"{{url-guru-service}}"
+									],
+									"path": [
+										"guru",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:44:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"namaGuru\": \"Gian\",\n        \"status\": false,\n        \"mataPelajaran\": \"Geografi\"\n    },\n    {\n        \"id\": 3,\n        \"namaGuru\": \"Serly\",\n        \"status\": false,\n        \"mataPelajaran\": \"Matematika\"\n    },\n    {\n        \"id\": 4,\n        \"namaGuru\": \"Siska\",\n        \"status\": false,\n        \"mataPelajaran\": \"TIK\"\n    },\n    {\n        \"id\": 5,\n        \"namaGuru\": \"Ayu Utami\",\n        \"status\": false,\n        \"mataPelajaran\": \"Bhs Inggris\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Siswa",
+			"item": [
+				{
+					"name": "Add Siswa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomorIndukSiswa\" : \"202415\",\r\n    \"namaSiswa\": \"Fatah\",\r\n    \"status\" : false,\r\n    \"kelas\" : \"11\",\r\n    \"waliKelas\" : \"Ayu Utami\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-siswa-service}}/siswa/create",
+							"host": [
+								"{{url-siswa-service}}"
+							],
+							"path": [
+								"siswa",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Siswa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-siswa-service}}/siswa/getDetail?id=9",
+							"host": [
+								"{{url-siswa-service}}"
+							],
+							"path": [
+								"siswa",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-siswa-service}}/siswa/getDetail?id=2",
+									"host": [
+										"{{url-siswa-service}}"
+									],
+									"path": [
+										"siswa",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:43:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nomorIndukSiswa\": \"20242\",\n    \"namaSiswa\": \"Ghifari\",\n    \"status\": false,\n    \"kelas\": \"10\",\n    \"waliKelas\": \"Gian\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-siswa-service}}/siswa/getDetail?id=9",
+									"host": [
+										"{{url-siswa-service}}"
+									],
+									"path": [
+										"siswa",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:44:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data tidak ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/siswa-service/siswa/getDetail\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Siswa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 9,\r\n    \"nomorIndukSiswa\" : \"1112\",\r\n    \"namaSiswa\" : \"Adam Ghifari\",\r\n    \"status\" : false,\r\n    \"kelas\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-siswa-service}}/siswa/update",
+							"host": [
+								"{{url-siswa-service}}"
+							],
+							"path": [
+								"siswa",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 9,\r\n    \"nomorIndukSiswa\" : \"1112\",\r\n    \"namaSiswa\" : \"Adam Ghifari\",\r\n    \"status\" : false,\r\n    \"kelas\" : \"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-siswa-service}}/siswa/update",
+									"host": [
+										"{{url-siswa-service}}"
+									],
+									"path": [
+										"siswa",
+										"update"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:45:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data tidak ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/siswa-service/siswa/update\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Siswa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-siswa-service}}/siswa/delete?id=9",
+							"host": [
+								"{{url-siswa-service}}"
+							],
+							"path": [
+								"siswa",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Siswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-siswa-service}}/siswa/list",
+							"host": [
+								"{{url-siswa-service}}"
+							],
+							"path": [
+								"siswa",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-siswa-service}}/siswa/list",
+									"host": [
+										"{{url-siswa-service}}"
+									],
+									"path": [
+										"siswa",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:43:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 15,\n        \"nomorIndukSiswa\": \"202415\",\n        \"namaSiswa\": \"Fatah\",\n        \"status\": false,\n        \"kelas\": \"11\",\n        \"waliKelas\": \"Ayu Utami\"\n    },\n    {\n        \"id\": 1,\n        \"nomorIndukSiswa\": \"20241\",\n        \"namaSiswa\": \"Adam\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Gian\"\n    },\n    {\n        \"id\": 2,\n        \"nomorIndukSiswa\": \"20242\",\n        \"namaSiswa\": \"Ghifari\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Gian\"\n    },\n    {\n        \"id\": 3,\n        \"nomorIndukSiswa\": \"20243\",\n        \"namaSiswa\": \"Rian\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Gian\"\n    },\n    {\n        \"id\": 4,\n        \"nomorIndukSiswa\": \"20244\",\n        \"namaSiswa\": \"Berli\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Serly\"\n    },\n    {\n        \"id\": 5,\n        \"nomorIndukSiswa\": \"20245\",\n        \"namaSiswa\": \"Syukri\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Gian\"\n    },\n    {\n        \"id\": 6,\n        \"nomorIndukSiswa\": \"20246\",\n        \"namaSiswa\": \"Rahmat\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Serly\"\n    },\n    {\n        \"id\": 7,\n        \"nomorIndukSiswa\": \"20247\",\n        \"namaSiswa\": \"Emil\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Serly\"\n    },\n    {\n        \"id\": 8,\n        \"nomorIndukSiswa\": \"20248\",\n        \"namaSiswa\": \"Rahman\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Serly\"\n    },\n    {\n        \"id\": 10,\n        \"nomorIndukSiswa\": \"202410\",\n        \"namaSiswa\": \"Fahri\",\n        \"status\": false,\n        \"kelas\": \"10\",\n        \"waliKelas\": \"Gian\"\n    },\n    {\n        \"id\": 11,\n        \"nomorIndukSiswa\": \"202411\",\n        \"namaSiswa\": \"Sultan\",\n        \"status\": false,\n        \"kelas\": \"11\",\n        \"waliKelas\": \"Ayu Utami\"\n    },\n    {\n        \"id\": 12,\n        \"nomorIndukSiswa\": \"202412\",\n        \"namaSiswa\": \"Kiki\",\n        \"status\": false,\n        \"kelas\": \"11\",\n        \"waliKelas\": \"Ayu Utami\"\n    },\n    {\n        \"id\": 13,\n        \"nomorIndukSiswa\": \"202413\",\n        \"namaSiswa\": \"Zaskia\",\n        \"status\": false,\n        \"kelas\": \"11\",\n        \"waliKelas\": \"Ayu Utami\"\n    },\n    {\n        \"id\": 14,\n        \"nomorIndukSiswa\": \"202414\",\n        \"namaSiswa\": \"Nurul\",\n        \"status\": false,\n        \"kelas\": \"11\",\n        \"waliKelas\": \"Ayu Utami\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mata Pelajaran",
+			"item": [
+				{
+					"name": "Add Mapel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mataPelajaran\" : \"TIK\",\r\n    \"kelas\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-mapel-service}}/mataPelajaran/add",
+							"host": [
+								"{{url-mapel-service}}"
+							],
+							"path": [
+								"mataPelajaran",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Mapel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-mapel-service}}/mataPelajaran/getDetail?id=2",
+							"host": [
+								"{{url-mapel-service}}"
+							],
+							"path": [
+								"mataPelajaran",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-mapel-service}}/mataPelajaran/getDetail?id=4",
+									"host": [
+										"{{url-mapel-service}}"
+									],
+									"path": [
+										"mataPelajaran",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:45:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/mapel-service/mataPelajaran/getDetail\",\n    \"error\": \"Not Found\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-mapel-service}}/mataPelajaran/getDetail?id=2",
+									"host": [
+										"{{url-mapel-service}}"
+									],
+									"path": [
+										"mataPelajaran",
+										"getDetail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:45:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"mataPelajaran\": \"Geografi\",\n    \"kelas\": \"10\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Mapel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 5,\r\n    \"mataPelajaran\" : \"Fisika Dasar\",\r\n    \"kelas\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-mapel-service}}/mataPelajaran/update",
+							"host": [
+								"{{url-mapel-service}}"
+							],
+							"path": [
+								"mataPelajaran",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 4,\r\n    \"mataPelajaran\" : \"Fisika Dasar\",\r\n    \"kelas\" : \"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-mapel-service}}/mataPelajaran/update",
+									"host": [
+										"{{url-mapel-service}}"
+									],
+									"path": [
+										"mataPelajaran",
+										"update"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:46:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/mapel-service/mataPelajaran/update\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Mapel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-mapel-service}}/mataPelajaran/delete?id=4",
+							"host": [
+								"{{url-mapel-service}}"
+							],
+							"path": [
+								"mataPelajaran",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Mapel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-mapel-service}}/mataPelajaran/list",
+							"host": [
+								"{{url-mapel-service}}"
+							],
+							"path": [
+								"mataPelajaran",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-mapel-service}}/mataPelajaran/list",
+									"host": [
+										"{{url-mapel-service}}"
+									],
+									"path": [
+										"mataPelajaran",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:45:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"mataPelajaran\": \"Bhs Inggris\",\n        \"kelas\": \"11\"\n    },\n    {\n        \"id\": 2,\n        \"mataPelajaran\": \"Geografi\",\n        \"kelas\": \"10\"\n    },\n    {\n        \"id\": 3,\n        \"mataPelajaran\": \"Matematika\",\n        \"kelas\": \"10\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Data Kelas",
+			"item": [
+				{
+					"name": "findByNamaSiswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namaSiswa\": \"Harun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaSiswa",
+							"host": [
+								"{{url-data-kelas-service}}"
+							],
+							"path": [
+								"dataKelas",
+								"findByNamaSiswa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaSiswa\": \"Adam\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaSiswa",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNamaSiswa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:41:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"namaSiswa\": \"Adam\",\n    \"namaGuru\": \"Gian\",\n    \"kelas\": \"10\",\n    \"mataPelajaran\": [\n        \"Geografi\",\n        \"Matematika\"\n    ]\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaSiswa\": \"Harun\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaSiswa",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNamaSiswa"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:47:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Siswa Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/data-kelas-service/dataKelas/findByNamaSiswa\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "findByNomorIndukSiswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomorIndukSiswa\" : \"20241\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-data-kelas-service}}/dataKelas/findByNomorIndukSiswa",
+							"host": [
+								"{{url-data-kelas-service}}"
+							],
+							"path": [
+								"dataKelas",
+								"findByNomorIndukSiswa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomorIndukSiswa\" : \"20241\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNomorIndukSiswa",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNomorIndukSiswa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:41:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"namaSiswa\": \"Adam\",\n    \"namaGuru\": \"Gian\",\n    \"kelas\": \"10\",\n    \"mataPelajaran\": [\n        \"Geografi\",\n        \"Matematika\"\n    ]\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomorIndukSiswa\" : \"202499\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNomorIndukSiswa",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNomorIndukSiswa"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:47:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data NIS Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/data-kelas-service/dataKelas/findByNomorIndukSiswa\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "findByKelas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kelas\" : \"9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-data-kelas-service}}/dataKelas/findByKelas",
+							"host": [
+								"{{url-data-kelas-service}}"
+							],
+							"path": [
+								"dataKelas",
+								"findByKelas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"kelas\" : \"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByKelas",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByKelas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:41:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"namaSiswa\": [\n        \"Adam\",\n        \"Ghifari\",\n        \"Rian\",\n        \"Berli\",\n        \"Syukri\",\n        \"Rahmat\",\n        \"Emil\",\n        \"Rahman\",\n        \"Fahri\"\n    ],\n    \"namaGuru\": [\n        \"Gian\",\n        \"Serly\"\n    ],\n    \"kelas\": \"10\",\n    \"mataPelajaran\": [\n        \"Geografi\",\n        \"Matematika\"\n    ]\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"kelas\" : \"9\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByKelas",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByKelas"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:49:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Kelas Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/data-kelas-service/dataKelas/findByKelas\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "findByMataPelajaran",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mataPelajaran\": \"Manajemen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-data-kelas-service}}/dataKelas/findByMataPelajaran",
+							"host": [
+								"{{url-data-kelas-service}}"
+							],
+							"path": [
+								"dataKelas",
+								"findByMataPelajaran"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mataPelajaran\": \"Geografi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByMataPelajaran",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByMataPelajaran"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:40:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"namaSiswa\": [\n        \"Adam\",\n        \"Ghifari\",\n        \"Rian\",\n        \"Berli\",\n        \"Syukri\",\n        \"Rahmat\",\n        \"Emil\",\n        \"Rahman\",\n        \"Fahri\"\n    ],\n    \"namaGuru\": \"Gian\",\n    \"kelas\": \"10\",\n    \"mataPelajaran\": \"Geografi\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mataPelajaran\": \"Manajemen\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByMataPelajaran",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByMataPelajaran"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:49:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Mata Pelajaran Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/data-kelas-service/dataKelas/findByMataPelajaran\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "findByNamaGuru",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namaGuru\" : \"Toni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaGuru",
+							"host": [
+								"{{url-data-kelas-service}}"
+							],
+							"path": [
+								"dataKelas",
+								"findByNamaGuru"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaGuru\" : \"Gian\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaGuru",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNamaGuru"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:40:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"namaSiswa\": [\n        \"Adam\",\n        \"Ghifari\",\n        \"Rian\",\n        \"Syukri\",\n        \"Fahri\"\n    ],\n    \"namaGuru\": \"Gian\",\n    \"kelas\": [\n        \"10\"\n    ],\n    \"mataPelajaran\": \"Geografi\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"namaGuru\" : \"Toni\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-data-kelas-service}}/dataKelas/findByNamaGuru",
+									"host": [
+										"{{url-data-kelas-service}}"
+									],
+									"path": [
+										"dataKelas",
+										"findByNamaGuru"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Jul 2024 02:50:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data Guru Tidak Ditemukan\",\n    \"status\": \"NOT_FOUND\",\n    \"path\": \"uri=/api/data-kelas-service/dataKelas/findByNamaGuru\",\n    \"error\": \"Not Found\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url-guru-service",
+			"value": "http://localhost:8081/api/guru-service"
+		},
+		{
+			"key": "url-siswa-service",
+			"value": "http://localhost:8082/api/siswa-service"
+		},
+		{
+			"key": "url-mapel-service",
+			"value": "http://localhost:8011/api/mapel-service"
+		},
+		{
+			"key": "url-data-kelas-service",
+			"value": "http://localhost:8083/api/data-kelas-service"
+		}
+	]
+}
