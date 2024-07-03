@@ -1,0 +1,12 @@
+com\base\service\errorhandler\ErrorHandler.class
+com\base\service\errorhandler\GlobalExceptionHandler$ErrorResponse.class
+com\base\service\model\MapelModel.class
+com\base\service\repository\MapelRepository.class
+com\base\service\model\MapelModel$MapelModelBuilder.class
+com\base\service\repository\GuruRepository.class
+com\base\service\model\GuruModel$GuruModelBuilder.class
+com\base\service\model\SiswaModel$SiswaModelBuilder.class
+com\base\service\repository\SiswaRepository.class
+com\base\service\model\SiswaModel.class
+com\base\service\errorhandler\GlobalExceptionHandler.class
+com\base\service\model\GuruModel.class
